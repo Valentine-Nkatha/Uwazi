@@ -313,7 +313,7 @@ const features = [
   {/* Properties Grid */}
   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
     {properties.map((property, index) => (
-      <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+      <div key={index} className="bg-white dark:bg-white rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
         <div className="relative">
           <Image 
             src={property.image} 
