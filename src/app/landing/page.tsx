@@ -241,7 +241,7 @@ const features = [
         
         <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm p-3 rounded-2xl border border-white/20 shadow-xl transform transition-transform hover:scale-[1.02] duration-500">
           <Image
-            src="/images/house.jpg" // Replace with actual image
+            src="/Images/house.jpg" // Replace with actual image
             alt="Modern property"
             width={550}
             height={400}
