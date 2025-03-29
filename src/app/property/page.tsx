@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 
@@ -94,13 +95,13 @@ const PropertyGrid = () => {
       
       {/* Decorative element */}
       <div className="flex justify-center mt-16">
-        <button className="group relative px-8 py-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-gray-700 font-medium text-sm flex items-center overflow-hidden">
+        <Link href="/viewcategories"><button className="group relative px-8 py-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-gray-700 font-medium text-sm flex items-center overflow-hidden">
           <span className="relative z-10">View All Categories</span>
           <span className="absolute inset-0 bg-gradient-to-r from-indigo-100 to-purple-100 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></span>
           <svg className="w-5 h-5 ml-2 relative z-10 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
-        </button>
+        </button></Link>
       </div>
     </div>
   );

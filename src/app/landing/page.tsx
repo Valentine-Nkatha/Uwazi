@@ -1,6 +1,6 @@
 'use client';
 
-import {FaHome } from "react-icons/fa";
+import {FaHome, FaSearch } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import PropertyGrid from "../property/page";
@@ -9,6 +9,7 @@ import Footer from "../footer/page";
 import StatsSection from "../statiscs/page";
 import UwaziTechInnovations from "../technology/page";
 import Ratings from "../ratings/page";
+import HeaderComponent from "../components/Navbar";
 
 export default function PropertyDashboard() {
 //   const [displayTotalPrice, setDisplayTotalPrice] = useState(false);
@@ -63,119 +64,8 @@ const features = [
     <div className="min-h-screen">
       <div className="bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 min-h-screen font-sans">
   {/* Navbar with glass morphism effect */}
-  <header className="sticky top-0 z-50 backdrop-blur-md bg-white/10 border-b border-white/20">
-    <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-      {/* Logo */}
-      <div className="flex items-center">
-        <h1 className="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-          Uwazi
-        </h1>
-      </div>
 
-      {/* Navigation - Center */}
-      <nav className="hidden md:flex items-center space-x-8 text-white/90 font-medium">
-        <Link href="/rent" className="relative group py-2">
-          <span className="hover:text-white transition-colors duration-300">Rent</span>
-          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-        </Link>
-        
-        <Link href="/sell" className="relative group py-2">
-          <span className="hover:text-white transition-colors duration-300">Sell</span>
-          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-        </Link>
-        
-        <Link href="/buy" className="relative group py-2">
-          <span className="hover:text-white transition-colors duration-300">Buy</span>
-          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-        </Link>
-
-        {/* Dropdown - Manage Property */}
-        <div className="relative group">
-          <button className="flex items-center hover:text-white transition-colors duration-300">
-            Manage Property
-            <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg border border-white/20 shadow-xl overflow-hidden">
-              <div className="p-2 space-y-1">
-                <Link href="#" className="block px-4 py-2 text-sm rounded-md hover:bg-white/10 transition-colors duration-200">
-                  Property Listing
-                </Link>
-                <Link href="#" className="block px-4 py-2 text-sm rounded-md hover:bg-white/10 transition-colors duration-200">
-                  Tenant Management
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Dropdown - Services */}
-        <div className="relative group">
-          <button className="flex items-center hover:text-white transition-colors duration-300">
-            Services
-            <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg border border-white/20 shadow-xl overflow-hidden">
-              <div className="p-2 space-y-1">
-                <Link href="#" className="block px-4 py-2 text-sm rounded-md hover:bg-white/10 transition-colors duration-200">
-                  Legal Advice
-                </Link>
-                <Link href="#" className="block px-4 py-2 text-sm rounded-md hover:bg-white/10 transition-colors duration-200">
-                  Property Valuation
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      {/* Mobile Menu Button */}
-      <button className="md:hidden text-white">
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-
-      {/* Right Side - Desktop */}
-      <div className="hidden md:flex items-center space-x-4">
-        <Link href="/about" className="px-4 py-2 text-white/90 hover:text-white transition-colors duration-300">
-          About Us
-        </Link>
-        <Link href="/contact" className="px-4 py-2 text-white/90 hover:text-white transition-colors duration-300">
-          Contact
-        </Link>
-        <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-5 py-2 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-blue-500/25">
-          Get Started
-        </button>
-      </div>
-    </div>
-  </header>
-
-  {/* Mobile Menu (Hidden by default) */}
-  <div className="hidden bg-indigo-900/95 backdrop-blur-md fixed inset-0 z-40 p-4">
-    <div className="flex justify-end">
-      <button className="text-white p-2">
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
-    <nav className="flex flex-col space-y-4 mt-8 text-white text-lg">
-      <Link href="/rent" className="py-2 border-b border-white/10">Rent</Link>
-      <Link href="/sell" className="py-2 border-b border-white/10">Sell</Link>
-      <Link href="/buy" className="py-2 border-b border-white/10">Buy</Link>
-      <Link href="#" className="py-2 border-b border-white/10">Manage Property</Link>
-      <Link href="#" className="py-2 border-b border-white/10">Services</Link>
-      <Link href="/about" className="py-2 border-b border-white/10">About Us</Link>
-      <Link href="/contact" className="py-2 border-b border-white/10">Contact</Link>
-    </nav>
-  </div>
-
+<HeaderComponent/>
   {/* Hero Section with animated elements */}
   <div className="container mx-auto px-4 pt-16 md:pt-24 pb-16">
     <div className="flex flex-col md:flex-row items-center gap-12">
@@ -210,12 +100,12 @@ const features = [
         
         {/* Authentication Buttons */}
         <div className="flex items-center space-x-6 mt-8">
-          <button className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-all">
+          <Link  href="/signin"><button className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-all">
             Sign In
-          </button>
-          <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all">
+          </button></Link>
+          <Link href="/signup"><button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all">
             Sign Up
-          </button>
+          </button></Link>
         </div>
         
         {/* Trust Indicators */}
@@ -289,14 +179,6 @@ const features = [
       </div>
       </div>
 
-
-      {/* <div className="flex items-center justify-center mt-6">
-        <label className="flex items-center space-x-2 text-gray-600">
-          <span>Display Total Price</span>
-          <input type="checkbox" className="toggle-checkbox" onChange={() => setDisplayTotalPrice(!displayTotalPrice)} />
-        </label>
-      </div> */}
-
      
 <div className="bg-gradient-to-r from-indigo-500 to-purple-600 p-8 rounded-2xl shadow-xl">
   <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
@@ -304,10 +186,10 @@ const features = [
       <h2 className="text-4xl font-extrabold text-white mb-2">Popular Properties</h2>
       <p className="text-indigo-100">Discover our most loved vacation homes</p>
     </div>
-    <button className="relative overflow-hidden group bg-white text-indigo-600 px-6 py-3 rounded-xl font-medium transition-all hover:shadow-lg">
+   <Link href="/viewproperty"> <button className="relative overflow-hidden group bg-white text-indigo-600 px-6 py-3 rounded-xl font-medium transition-all hover:shadow-lg">
       <span className="relative z-10">View All Properties</span>
       <span className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-x-full group-hover:translate-x-0"></span>
-    </button>
+    </button></Link>
   </div>
 
   {/* Properties Grid */}
@@ -406,92 +288,92 @@ const features = [
     </svg>
   </div>
 </section>
-    <div className="relative py-16 overflow-hidden">
-  {/* Background decorative elements */}
-  <div className="absolute -top-24 -left-24 w-64 h-64 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-70 blur-2xl"></div>
-  <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-gradient-to-tr from-amber-100 to-rose-100 rounded-full opacity-70 blur-3xl"></div>
+
+    <div className="relative py-16 overflow-hidden bg-white dark:bg-gray-900">
+      {/* Background decorative elements with improved opacity for dark mode */}
+      <div className="absolute -top-24 -left-24 w-64 h-64 bg-gradient-to-br from-blue-200 to-purple-200 dark:from-blue-900/30 dark:to-purple-900/30 rounded-full opacity-70 blur-2xl"></div>
+      <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-gradient-to-tr from-amber-200 to-rose-200 dark:from-amber-900/30 dark:to-rose-900/30 rounded-full opacity-70 blur-3xl"></div>
+      
+      <div className="relative text-center max-w-6xl mx-auto px-4">
+        {/* Subtle decorative line */}
+        <div className="flex justify-center mb-6">
+          <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
+        </div>
+        
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
+          Discover Your Perfect Space
+        </h2>
+        
+        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mt-6 leading-relaxed">
+          Explore living environments meticulously crafted to enhance your lifestyle, 
+          where comfort meets elegance in spaces that inspire.
+        </p>
+        
+        {/* Search or filter options with dark mode support */}
+        <div className="mt-10 mb-8 max-w-4xl mx-auto bg-white dark:bg-gray-800 p-4 md:p-6 rounded-2xl shadow-lg flex flex-col md:flex-row gap-4 justify-between">
+          <div className="flex-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 text-left mb-1">Location</label>
+            <div className="relative">
+              <select className="w-full py-3 px-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-200 appearance-none focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                <option>Any Location</option>
+                <option>Downtown</option>
+                <option>Suburbs</option>
+                <option>Beachfront</option>
+              </select>
+              <div className="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
+                <svg className="w-5 h-5 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 text-left mb-1">Property Type</label>
+            <div className="relative">
+              <select className="w-full py-3 px-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-200 appearance-none focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                <option>All Types</option>
+                <option>Apartment</option>
+                <option>House</option>
+                <option>Villa</option>
+              </select>
+              <div className="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
+                <svg className="w-5 h-5 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex-1">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 text-left mb-1">Price Range</label>
+            <div className="relative">
+              <select className="w-full py-3 px-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-200 appearance-none focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                <option>Any Price</option>
+                <option>$0 - $1,000</option>
+                <option>$1,000 - $2,000</option>
+                <option>$2,000+</option>
+              </select>
+              <div className="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
+                <svg className="w-5 h-5 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 px-8 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center">
+            <FaSearch className="w-5 h-5 mr-2" />
+            Search
+          </button>
+        </div>
+        
+        <div className="mt-12">
+          <PropertyGrid />
+        </div>
+      </div>
+    </div>
   
-  <div className="relative text-center max-w-6xl mx-auto px-4">
-    {/* Subtle decorative line */}
-    <div className="flex justify-center mb-6">
-      <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
-    </div>
-    
-    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-      Discover Your Perfect Space
-    </h2>
-    
-    <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed">
-      Explore living environments meticulously crafted to enhance your lifestyle, 
-      where comfort meets elegance in spaces that inspire.
-    </p>
-    
-    {/* Search or filter options */}
-    <div className="mt-10 mb-8 max-w-4xl mx-auto bg-white p-4 md:p-6 rounded-2xl shadow-lg flex flex-col md:flex-row gap-4 justify-between">
-      <div className="flex-1">
-        <label className="block text-sm font-medium text-gray-700 text-left mb-1">Location</label>
-        <div className="relative">
-          <select className="w-full py-3 px-4 bg-gray-50 border border-gray-200 rounded-lg text-gray-700 appearance-none focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
-            <option>Any Location</option>
-            <option>Downtown</option>
-            <option>Suburbs</option>
-            <option>Beachfront</option>
-          </select>
-          <div className="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
-            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-        </div>
-      </div>
-      
-      <div className="flex-1">
-        <label className="block text-sm font-medium text-gray-700 text-left mb-1">Property Type</label>
-        <div className="relative">
-          <select className="w-full py-3 px-4 bg-gray-50 border border-gray-200 rounded-lg text-gray-700 appearance-none focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
-            <option>All Types</option>
-            <option>Apartment</option>
-            <option>House</option>
-            <option>Villa</option>
-          </select>
-          <div className="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
-            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-        </div>
-      </div>
-      
-      <div className="flex-1">
-        <label className="block text-sm font-medium text-gray-700 text-left mb-1">Price Range</label>
-        <div className="relative">
-          <select className="w-full py-3 px-4 bg-gray-50 border border-gray-200 rounded-lg text-gray-700 appearance-none focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
-            <option>Any Price</option>
-            <option>$0 - $1,000</option>
-            <option>$1,000 - $2,000</option>
-            <option>$2,000+</option>
-          </select>
-          <div className="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
-            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-        </div>
-      </div>
-      
-      <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-8 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center">
-        <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-        Search
-      </button>
-    </div>
-    
-    <div className="mt-12">
-      <PropertyGrid />
-    </div>
-  </div>
-</div>
      <UwaziTechInnovations/>
      <Ratings/>
     <Footer/>

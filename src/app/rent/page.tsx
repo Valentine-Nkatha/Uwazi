@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaHeart, FaBed, FaBath, FaRulerCombined, FaSearch, FaMapMarkerAlt, FaDollarSign, FaHome } from 'react-icons/fa';
-import Link from 'next/link';
+import HeaderComponent from '../components/Navbar';
 
 // Property interface for type safety
 interface Property {
@@ -98,100 +98,10 @@ export default function RentalPropertiesPage() {
   };
 
   return (
+    <div>
+      <HeaderComponent/>
     <div className="bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 min-h-screen">
-      {/* Header */}
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-white/10 border-b border-white/20 shadow-lg">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          {/* Logo */}
-          <div className="flex items-center">
-            <h1 className="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-              Uwazi
-            </h1>
-          </div>
-
-          {/* Navigation - Center */}
-          <nav className="hidden md:flex items-center space-x-8 text-gray-800 font-medium">
-            <Link href="/rent" className="relative group py-2">
-              <span className="hover:text-blue-600 transition-colors duration-300">Rent</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            
-            <Link href="/sell" className="relative group py-2">
-              <span className="hover:text-blue-600 transition-colors duration-300">Sell</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            
-            <Link href="/buy" className="relative group py-2">
-              <span className="hover:text-blue-600 transition-colors duration-300">Buy</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-
-            {/* Dropdown - Manage Property */}
-            <div className="relative group">
-              <button className="flex items-center hover:text-blue-600 transition-colors duration-300">
-                Manage Property
-                <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
-                <div className="bg-white backdrop-blur-lg rounded-lg border border-blue-100 shadow-xl overflow-hidden">
-                  <div className="p-2 space-y-1">
-                    <Link href="#" className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50 transition-colors duration-200">
-                      Property Listing
-                    </Link>
-                    <Link href="#" className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50 transition-colors duration-200">
-                      Tenant Management
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Dropdown - Services */}
-            <div className="relative group">
-              <button className="flex items-center hover:text-blue-600 transition-colors duration-300">
-                Services
-                <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
-                <div className="bg-white backdrop-blur-lg rounded-lg border border-blue-100 shadow-xl overflow-hidden">
-                  <div className="p-2 space-y-1">
-                    <Link href="#" className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50 transition-colors duration-200">
-                      Legal Advice
-                    </Link>
-                    <Link href="#" className="block px-4 py-2 text-sm rounded-md hover:bg-blue-50 transition-colors duration-200">
-                      Property Valuation
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button className="md:hidden text-gray-800">
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-
-          {/* Right Side - Desktop */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link href="/about" className="px-4 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-300">
-              About Us
-            </Link>
-            <Link href="/contact" className="px-4 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-300">
-              Contact
-            </Link>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-5 py-2 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-blue-500/25">
-              Get Started
-            </button>
-          </div>
-        </div>
-      </header>
+    
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-12">
@@ -330,6 +240,7 @@ export default function RentalPropertiesPage() {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 }

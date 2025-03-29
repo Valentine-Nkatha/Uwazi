@@ -55,7 +55,8 @@ const Ratings = () => {
       );
       setIsAnimating(false);
     }, 300);
-  }, [isAnimating, ratingsData.length]); // Dependencies
+  }, [isAnimating]); // Remove ratingsData.length
+   // Dependencies
   
   useEffect(() => {
     const interval = setInterval(() => {

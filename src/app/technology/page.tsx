@@ -1,4 +1,5 @@
 // components/UwaziTechInnovations.tsx
+import Link from 'next/link';
 import React from 'react';
 import {  FaShieldAlt, FaVrCardboard, FaRegHandshake, FaMobileAlt } from 'react-icons/fa';
 import { FaIoxhost } from 'react-icons/fa6';
@@ -139,9 +140,9 @@ const UwaziTechInnovations: React.FC = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <button className="px-8 py-4 bg-blue-600 text-white font-medium rounded-lg shadow-lg hover:bg-blue-700 transition-colors focus:ring-4 focus:ring-blue-300 focus:outline-none">
+         <Link href="/signup"><button className="px-8 py-4 bg-blue-600 text-white font-medium rounded-lg shadow-lg hover:bg-blue-700 transition-colors focus:ring-4 focus:ring-blue-300 focus:outline-none">
             Experience Our Technology Advantage
-          </button>
+          </button></Link> 
         </div>
       </div>
     </div>
