@@ -41,21 +41,21 @@ const features = [
       location: "Al Barsha 1, Al Barsha",
       price: 189,
       rating: 4.83,
-      image: "/images/house.jpg"
+      image: "/Images/house.jpg"
     },
     {
       name: "Mykonos Damac Lagoons",
       location: "Palm Jumeirah",
       price: 560,
       rating: 4.67,
-      image: "/images/house.jpg"
+      image: "/Images/house.jpg"
     },
     {
       name: "Verdana 2 Residence",
       location: "Dubai Marina",
       price: 231,
       rating: 4.45,
-      image: "/images/house.jpg"
+      image: "/Images/house.jpg"
     }
   ];
 
