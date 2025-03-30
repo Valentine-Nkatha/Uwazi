@@ -78,10 +78,10 @@ const PropertyGrid = () => {
                 <p className="text-gray-600 text-sm mb-4">{property.description}</p>
                 
                 {/* Animated button */}
-                <button className="relative overflow-hidden mt-2 px-6 py-2 rounded-lg font-medium text-sm bg-gradient-to-r from-indigo-500 to-purple-500 text-white">
+                <Link href="/specificproperty"><button className="relative overflow-hidden mt-2 px-6 py-2 rounded-lg font-medium text-sm bg-gradient-to-r from-indigo-500 to-purple-500 text-white">
                   <span className="relative z-10">Explore Properties</span>
                   <span className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-                </button>
+                </button></Link>
               </div>
             </div>
             

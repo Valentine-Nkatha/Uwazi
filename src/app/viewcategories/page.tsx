@@ -57,7 +57,7 @@ const CategoriesPage = () => {
               <div className="mt-2 bg-white/80 text-indigo-600 px-3 py-1 rounded-full text-sm font-medium">
                 {category.properties} Properties
               </div>
-              <Link href={`/categories/${category.title.toLowerCase().replace(/ /g, "-")}`}>
+              <Link href="/specificproperty/">
                 <button className="mt-4 bg-white text-indigo-600 px-4 py-2 rounded-full font-medium opacity-90 hover:opacity-100 transition">
                   View Listings
                 </button>

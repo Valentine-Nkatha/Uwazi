@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import HeaderComponent from "../components/Navbar";
+import Link from "next/link";
 
 const properties = [
   {
@@ -106,9 +107,9 @@ const PropertiesPage = () => {
               </div>
 
               {/* View Details Button */}
-              <button className="w-full mt-6 bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 rounded-lg transition-colors">
+             <Link href="/specificproperty"> <button className="w-full mt-6 bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 rounded-lg transition-colors">
                 View Details
-              </button>
+              </button></Link>
             </div>
           </motion.div>
         ))}

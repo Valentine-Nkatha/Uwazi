@@ -6,25 +6,25 @@ const teamMembers = [
   {
     name: "John Doe",
     role: "Founder & CEO",
-    image: "/team/john.jpg",
+    image: "/Images/human.jpeg",
     description: "John has over 15 years of experience in real estate and technology, leading our vision."
   },
   {
     name: "Jane Smith",
     role: "Chief Operations Officer",
-    image: "/team/jane.jpg",
+    image: "/Images/human.jpeg",
     description: "Jane ensures smooth operations and excellent client satisfaction across all properties."
   },
   {
     name: "Mark Brown",
     role: "Lead Developer",
-    image: "/team/mark.jpg",
+    image: "/Images/human.jpeg",
     description: "Mark drives the tech behind our platform, ensuring security and innovation."
   },
   {
     name: "Emily White",
     role: "Head of Marketing",
-    image: "/team/emily.jpg",
+    image: "/Images/human.jpeg",
     description: "Emily crafts strategies that connect buyers, sellers, and investors effectively."
   }
 ];

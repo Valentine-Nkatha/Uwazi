@@ -230,9 +230,9 @@ const features = [
             <div className="text-2xl font-bold text-indigo-600">${property.price} <span className="text-sm font-normal text-gray-500">/ Night</span></div>
           </div>
           
-          <button className="w-full mt-6 bg-indigo-50 hover:bg-indigo-100 text-indigo-600 font-medium py-3 rounded-lg transition-colors">
+          <Link href="/specificproperty"><button className="w-full mt-6 bg-indigo-50 hover:bg-indigo-100 text-indigo-600 font-medium py-3 rounded-lg transition-colors">
             View Details
-          </button>
+          </button></Link>
         </div>
       </div>
     ))}

@@ -8,25 +8,25 @@ const ratingsData = [
     text: "Uwazi revolutionized my property transaction experience. From searching for property details to finalizing the contract, the process was transparent and efficient. The integration of 3D viewing of the property assured me of the system's reliability.",
     author: "Nyaga Gloria",
     role: "Real Estate Investor",
-    image: "/Images/house.jpg"
+    image: "/Images/human.jpeg",
   },
   {
     text: "The service was outstanding! I found exactly what I was looking for and the support team was incredibly helpful.",
     author: "Valentine Nkatha",
     role: "Home owner",
-    image: "/Images/house.jpg"
+    image: "/Images/human.jpeg",
   },
   {
     text: "Uwazi platform made my property search so much easier. The support team was quick to assist, and I had a seamless experience throughout.",
     author: "Brenda Khamali",
     role: "Home owner",
-    image: "/Images/house.jpg"
+    image: "/Images/human.jpeg",
   },
   {
     text: "Uwazi service was outstanding! I found exactly what I was looking for and the support team was incredibly helpful. It was easier and fast and I highly recommend it.",
     author: "Maureen Gatweri",
     role: "Land seller",
-    image: "/Images/house.jpg"
+    image: "/Images/human.jpeg",
   },
 ];
 
